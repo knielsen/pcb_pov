@@ -31,6 +31,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:w_analog
+LIBS:w_device
 LIBS:tiva_pcb1-cache
 EELAYER 24 0
 EELAYER END
@@ -141,7 +142,7 @@ L C C6
 U 1 1 519E884C
 P 8200 1950
 F 0 "C6" H 8250 2050 50  0000 L CNN
-F 1 "1u" H 8250 1850 50  0000 L CNN
+F 1 "10u" H 8250 1850 50  0000 L CNN
 F 2 "" H 8200 1950 60  0001 C CNN
 F 3 "" H 8200 1950 60  0001 C CNN
 	1    8200 1950
@@ -348,18 +349,18 @@ gnd
 NoConn ~ 2400 6900
 NoConn ~ 2400 6600
 NoConn ~ 2400 5900
-Text Label 1050 1850 0    30   ~ 0
+Text Label 2900 650  0    30   ~ 0
 sd_cd
 $Comp
 L R R2
 U 1 1 519E7AE3
-P 1500 1850
-F 0 "R2" V 1580 1850 50  0000 C CNN
-F 1 "0" V 1500 1850 50  0000 C CNN
-F 2 "" H 1500 1850 60  0001 C CNN
-F 3 "" H 1500 1850 60  0001 C CNN
-	1    1500 1850
-	0    -1   -1   0   
+P 3100 900
+F 0 "R2" V 3180 900 50  0000 C CNN
+F 1 "0" V 3100 900 50  0000 C CNN
+F 2 "" H 3100 900 60  0001 C CNN
+F 3 "" H 3100 900 60  0001 C CNN
+	1    3100 900 
+	-1   0    0    1   
 $EndComp
 Text Label 2200 6800 0    30   ~ 0
 sd_cd
@@ -399,7 +400,7 @@ m_in2
 Text Label 2250 2450 3    30   ~ 0
 m_in1
 Text Label 2850 2150 0    30   ~ 0
-nrf_irq
+gsclk2
 Text Label 2850 2100 0    30   ~ 0
 nrf_cs
 Text Label 2850 2050 0    30   ~ 0
@@ -409,9 +410,9 @@ ssi1tx
 Text Label 2850 1950 0    30   ~ 0
 ssi1rx
 Text Label 2850 1850 0    30   ~ 0
-pd7
+hall2
 Text Label 2850 1800 0    30   ~ 0
-xlat2
+hall3
 Text Label 2850 1750 0    30   ~ 0
 usb_dp
 Text Label 2850 1700 0    30   ~ 0
@@ -421,7 +422,7 @@ sin3
 Text Label 2850 1600 0    30   ~ 0
 sout3
 Text Label 2850 1550 0    30   ~ 0
-m_sense2
+mode3
 Text Label 2850 1500 0    30   ~ 0
 sclk3
 Text Label 2850 1400 0    30   ~ 0
@@ -429,37 +430,37 @@ sin2
 Text Label 2850 1350 0    30   ~ 0
 sout2
 Text Label 2850 1300 0    30   ~ 0
-m_sense1
+gsclk3
 Text Label 2850 1250 0    30   ~ 0
 sclk2
 Text Label 2850 1200 0    30   ~ 0
-gsclk3
-Text Label 2850 1150 0    30   ~ 0
-gsclk2
-Text Label 2850 1100 0    30   ~ 0
-gsclk1
-Text Label 2850 1050 0    30   ~ 0
 nrf_ce
+Text Label 2850 1150 0    30   ~ 0
+sd_cd2
+Text Label 2850 1100 0    30   ~ 0
+sd_cs
+Text Label 2850 1050 0    30   ~ 0
+nrf_irq
 Text Label 1800 2200 0    30   ~ 0
 blank3
 Text Label 1800 2150 0    30   ~ 0
-blank2
-Text Label 1800 2100 0    30   ~ 0
-mode3
-Text Label 1800 2050 0    30   ~ 0
 xlat3
+Text Label 1800 2100 0    30   ~ 0
+blank2
+Text Label 1800 2050 0    30   ~ 0
+xlat2
 Text Label 1800 2000 0    30   ~ 0
-blank1
+m_sense1
 Text Label 1800 1950 0    30   ~ 0
-mode2
+m_sense2
 Text Label 1800 1850 0    30   ~ 0
-sd_cd2
+mode2
 Text Label 1800 1800 0    30   ~ 0
-hall3
+blank1
 Text Label 1800 1750 0    30   ~ 0
-hall2
-Text Label 1800 1700 0    30   ~ 0
 hall1
+Text Label 1800 1700 0    30   ~ 0
+gsclk1
 Text Label 1800 1650 0    30   ~ 0
 tdo
 Text Label 1800 1600 0    30   ~ 0
@@ -469,15 +470,15 @@ tms
 Text Label 1800 1500 0    30   ~ 0
 tck
 Text Label 1800 1400 0    30   ~ 0
-mode1
+user_led
 Text Label 1800 1350 0    30   ~ 0
-xlat1
+mode1
 Text Label 1800 1300 0    30   ~ 0
 sin1
 Text Label 1800 1250 0    30   ~ 0
 sout1
 Text Label 1800 1200 0    30   ~ 0
-user_led
+xlat1
 Text Label 1800 1150 0    30   ~ 0
 sclk1
 Text Label 1800 1100 0    30   ~ 0
@@ -584,7 +585,7 @@ L R R6
 U 1 1 52821C36
 P 4700 1000
 F 0 "R6" V 4780 1000 40  0000 C CNN
-F 1 "470" V 4707 1001 40  0000 C CNN
+F 1 "100" V 4707 1001 40  0000 C CNN
 F 2 "" V 4630 1000 30  0000 C CNN
 F 3 "" H 4700 1000 30  0000 C CNN
 	1    4700 1000
@@ -746,10 +747,10 @@ F 3 "" H 10150 4650 60  0000 C CNN
 	1    10150 4650
 	1    0    0    -1  
 $EndComp
-Text Label 9900 4350 0    60   ~ 0
-m_sense1
-Text Label 9900 4450 0    60   ~ 0
-m_sense2
+Text Label 9900 4350 0    50   ~ 0
+m_sense1_raw
+Text Label 9900 4450 0    50   ~ 0
+m_sense2_raw
 Text Label 8150 4100 0    60   ~ 0
 m_in1
 Text Label 8150 4450 0    60   ~ 0
@@ -835,17 +836,6 @@ F 3 "" H 9450 3700 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L CSMALL C15
-U 1 1 528266A3
-P 9250 3700
-F 0 "C15" H 9275 3750 30  0000 L CNN
-F 1 "100u" H 9275 3650 30  0000 L CNN
-F 2 "" H 9250 3700 60  0000 C CNN
-F 3 "" H 9250 3700 60  0000 C CNN
-	1    9250 3700
-	1    0    0    -1  
-$EndComp
-$Comp
 L +12V #PWR022
 U 1 1 52826B03
 P 9650 3550
@@ -872,7 +862,7 @@ L R R9
 U 1 1 52827273
 P 10650 4350
 F 0 "R9" V 10730 4350 40  0000 C CNN
-F 1 "0R5" V 10657 4351 40  0000 C CNN
+F 1 "0R22" V 10657 4351 40  0000 C CNN
 F 2 "" V 10580 4350 30  0000 C CNN
 F 3 "" H 10650 4350 30  0000 C CNN
 	1    10650 4350
@@ -883,7 +873,7 @@ L R R10
 U 1 1 52827294
 P 10650 4450
 F 0 "R10" V 10550 4450 40  0000 C CNN
-F 1 "0R5" V 10657 4451 40  0000 C CNN
+F 1 "0R22" V 10657 4451 40  0000 C CNN
 F 2 "" V 10580 4450 30  0000 C CNN
 F 3 "" H 10650 4450 30  0000 C CNN
 	1    10650 4450
@@ -1252,9 +1242,8 @@ F 1 "CONN_3" V 10700 5400 40  0000 C CNN
 F 2 "" H 10650 5400 60  0001 C CNN
 F 3 "" H 10650 5400 60  0001 C CNN
 	1    10650 5400
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
-NoConn ~ 10650 5050
 Text Label 10400 4700 0    60   ~ 0
 12v
 Text Label 5850 6000 0    60   ~ 0
@@ -1296,8 +1285,166 @@ F 3 "" H 8500 5750 60  0000 C CNN
 $EndComp
 Text Label 8650 5800 0    60   ~ 0
 usb5v
-Wire Wire Line
-	1300 1600 1300 1550
+Text Label 8700 5600 0    60   ~ 0
+vbat
+Text Label 1650 3050 0    60   ~ 0
+vbat
+Text Label 1650 3700 0    60   ~ 0
+vbat
+Text Label 1650 4350 0    60   ~ 0
+vbat
+$Comp
+L +12V #PWR038
+U 1 1 52836D8C
+P 10950 4900
+F 0 "#PWR038" H 10950 4850 20  0001 C CNN
+F 1 "+12V" H 10950 5000 30  0000 C CNN
+F 2 "" H 10950 4900 60  0000 C CNN
+F 3 "" H 10950 4900 60  0000 C CNN
+	1    10950 4900
+	1    0    0    -1  
+$EndComp
+Text Notes 9050 6000 0    30   ~ 0
+Jumper 1-2 selects battery power\nJumper 3-4 selects external 12V jack power\nJumper 5-6 selects USB power
+$Comp
+L PWR_FLAG #FLG039
+U 1 1 52836DAB
+P 10100 5600
+F 0 "#FLG039" H 10100 5695 30  0001 C CNN
+F 1 "PWR_FLAG" H 10100 5780 30  0000 C CNN
+F 2 "" H 10100 5600 60  0000 C CNN
+F 3 "" H 10100 5600 60  0000 C CNN
+	1    10100 5600
+	-1   0    0    1   
+$EndComp
+$Comp
+L R R16
+U 1 1 52837215
+P 8000 3750
+F 0 "R16" V 8080 3750 40  0000 C CNN
+F 1 "47k" V 8007 3751 40  0000 C CNN
+F 2 "" V 7930 3750 30  0000 C CNN
+F 3 "" H 8000 3750 30  0000 C CNN
+	1    8000 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R15
+U 1 1 52837350
+P 7850 3750
+F 0 "R15" V 7930 3750 40  0000 C CNN
+F 1 "47k" V 7857 3751 40  0000 C CNN
+F 2 "" V 7780 3750 30  0000 C CNN
+F 3 "" H 7850 3750 30  0000 C CNN
+	1    7850 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R14
+U 1 1 52837362
+P 7700 3750
+F 0 "R14" V 7780 3750 40  0000 C CNN
+F 1 "47k" V 7707 3751 40  0000 C CNN
+F 2 "" V 7630 3750 30  0000 C CNN
+F 3 "" H 7700 3750 30  0000 C CNN
+	1    7700 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR040
+U 1 1 528376F3
+P 8250 3600
+F 0 "#PWR040" H 8250 3600 30  0001 C CNN
+F 1 "GND" H 8250 3530 30  0001 C CNN
+F 2 "" H 8250 3600 60  0000 C CNN
+F 3 "" H 8250 3600 60  0000 C CNN
+	1    8250 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L DUAL_SWITCHING_DIODE D3
+U 1 1 5283ECC5
+P 10150 3750
+F 0 "D3" H 10250 3650 40  0000 C CNN
+F 1 "BAV99LT3G" H 10150 3850 40  0000 C CNN
+F 2 "" H 10150 3750 60  0000 C CNN
+F 3 "" H 10150 3750 60  0000 C CNN
+	1    10150 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L CAP C15
+U 1 1 528B628D
+P 9250 3750
+F 0 "C15" H 9100 3850 30  0000 L CNN
+F 1 "100u" H 9100 3700 30  0000 L CNN
+F 2 "" H 9250 3750 60  0000 C CNN
+F 3 "" H 9250 3750 60  0000 C CNN
+	1    9250 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R17
+U 1 1 528B6632
+P 10850 1950
+F 0 "R17" V 10930 1950 40  0000 C CNN
+F 1 "47k" V 10857 1951 40  0000 C CNN
+F 2 "" V 10780 1950 30  0000 C CNN
+F 3 "" H 10850 1950 30  0000 C CNN
+	1    10850 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR041
+U 1 1 528B67BC
+P 10725 2200
+F 0 "#PWR041" H 10725 2160 30  0001 C CNN
+F 1 "+3.3V" H 10725 2310 30  0000 C CNN
+F 2 "" H 10725 2200 60  0000 C CNN
+F 3 "" H 10725 2200 60  0000 C CNN
+	1    10725 2200
+	1    0    0    -1  
+$EndComp
+Text Label 6100 2400 0    30   ~ 0
+vdcc
+$Comp
+L R R18
+U 1 1 528BDD28
+P 9900 2775
+F 0 "R18" V 9980 2775 40  0000 C CNN
+F 1 "0" V 9907 2776 40  0000 C CNN
+F 2 "" V 9830 2775 30  0000 C CNN
+F 3 "" H 9900 2775 30  0000 C CNN
+	1    9900 2775
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R19
+U 1 1 528BDD3A
+P 9900 2950
+F 0 "R19" V 9980 2950 40  0000 C CNN
+F 1 "0" V 9907 2951 40  0000 C CNN
+F 2 "" V 9830 2950 30  0000 C CNN
+F 3 "" H 9900 2950 30  0000 C CNN
+	1    9900 2950
+	0    -1   -1   0   
+$EndComp
+Text Notes 9550 3100 0    30   ~ 0
+0 ohm resistors, connecting TM4C\nanalog input to motor R_sense
+Text Label 9300 2775 0    30   ~ 0
+m_sense1_raw
+Text Label 9300 2950 0    30   ~ 0
+m_sense2_raw
+Text Label 10200 2775 0    30   ~ 0
+m_sense1
+Text Label 10200 2950 0    30   ~ 0
+m_sense2
+Text Label 10175 4200 0    30   ~ 0
+vboot
+Text Label 9875 4100 0    30   ~ 0
+vcp
+Text Label 8425 5150 0    30   ~ 0
+vref
 Wire Wire Line
 	1150 1550 1950 1550
 Wire Wire Line
@@ -1353,7 +1500,7 @@ Wire Wire Line
 Wire Wire Line
 	4950 1450 5150 1450
 Wire Wire Line
-	1000 1850 1250 1850
+	2850 650  3100 650 
 Wire Wire Line
 	2100 6700 2600 6700
 Wire Wire Line
@@ -1463,9 +1610,7 @@ Wire Wire Line
 Wire Wire Line
 	2800 1250 3000 1250
 Wire Wire Line
-	2800 1200 3000 1200
-Wire Wire Line
-	2800 1150 3000 1150
+	2800 1150 3100 1150
 Wire Wire Line
 	2800 1100 3000 1100
 Wire Wire Line
@@ -1579,7 +1724,7 @@ Wire Wire Line
 Wire Wire Line
 	4750 5350 5050 5350
 Wire Wire Line
-	9850 4850 10550 4850
+	9850 4850 10650 4850
 Wire Wire Line
 	10150 4850 10150 5400
 Wire Wire Line
@@ -1595,8 +1740,6 @@ Wire Wire Line
 	9850 4600 10000 4600
 Wire Wire Line
 	10000 4600 10000 4700
-Wire Wire Line
-	9850 4700 10750 4700
 Wire Wire Line
 	10150 4700 10150 4650
 Connection ~ 10000 4700
@@ -1651,15 +1794,8 @@ Connection ~ 9350 3800
 Wire Wire Line
 	10900 4350 10900 4550
 Connection ~ 10900 4450
-Wire Wire Line
-	10750 4700 10750 5050
 Connection ~ 10150 4700
-Wire Wire Line
-	10550 4850 10550 5050
 Connection ~ 10150 4850
-Wire Wire Line
-	10750 4900 10950 4900
-Connection ~ 10750 4900
 Wire Wire Line
 	7950 5000 7950 5200
 Wire Wire Line
@@ -1814,105 +1950,18 @@ Wire Wire Line
 	8650 5800 8950 5800
 Wire Wire Line
 	8950 5600 8650 5600
-Text Label 8700 5600 0    60   ~ 0
-vbat
-Text Label 1650 3050 0    60   ~ 0
-vbat
-Text Label 1650 3700 0    60   ~ 0
-vbat
-Text Label 1650 4350 0    60   ~ 0
-vbat
-$Comp
-L +12V #PWR038
-U 1 1 52836D8C
-P 10950 4900
-F 0 "#PWR038" H 10950 4850 20  0001 C CNN
-F 1 "+12V" H 10950 5000 30  0000 C CNN
-F 2 "" H 10950 4900 60  0000 C CNN
-F 3 "" H 10950 4900 60  0000 C CNN
-	1    10950 4900
-	1    0    0    -1  
-$EndComp
-Text Notes 9050 6000 0    30   ~ 0
-Jumper 1-2 selects battery power\nJumper 3-4 selects external 12V jack power\nJumper 5-6 selects USB power
-$Comp
-L PWR_FLAG #FLG039
-U 1 1 52836DAB
-P 10100 5600
-F 0 "#FLG039" H 10100 5695 30  0001 C CNN
-F 1 "PWR_FLAG" H 10100 5780 30  0000 C CNN
-F 2 "" H 10100 5600 60  0000 C CNN
-F 3 "" H 10100 5600 60  0000 C CNN
-	1    10100 5600
-	-1   0    0    1   
-$EndComp
-$Comp
-L R R16
-U 1 1 52837215
-P 8000 3750
-F 0 "R16" V 8080 3750 40  0000 C CNN
-F 1 "47k" V 8007 3751 40  0000 C CNN
-F 2 "" V 7930 3750 30  0000 C CNN
-F 3 "" H 8000 3750 30  0000 C CNN
-	1    8000 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R15
-U 1 1 52837350
-P 7850 3750
-F 0 "R15" V 7930 3750 40  0000 C CNN
-F 1 "47k" V 7857 3751 40  0000 C CNN
-F 2 "" V 7780 3750 30  0000 C CNN
-F 3 "" H 7850 3750 30  0000 C CNN
-	1    7850 3750
-	1    0    0    -1  
-$EndComp
-$Comp
-L R R14
-U 1 1 52837362
-P 7700 3750
-F 0 "R14" V 7780 3750 40  0000 C CNN
-F 1 "47k" V 7707 3751 40  0000 C CNN
-F 2 "" V 7630 3750 30  0000 C CNN
-F 3 "" H 7700 3750 30  0000 C CNN
-	1    7700 3750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7700 3500 8250 3500
 Connection ~ 7850 3500
 Wire Wire Line
 	8250 3500 8250 3600
 Connection ~ 8000 3500
-$Comp
-L GND #PWR040
-U 1 1 528376F3
-P 8250 3600
-F 0 "#PWR040" H 8250 3600 30  0001 C CNN
-F 1 "GND" H 8250 3530 30  0001 C CNN
-F 2 "" H 8250 3600 60  0000 C CNN
-F 3 "" H 8250 3600 60  0000 C CNN
-	1    8250 3600
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	8000 4000 8000 4200
 Wire Wire Line
 	7850 4000 7850 4550
 Wire Wire Line
 	7700 4000 7700 4900
-$Comp
-L DUAL_SWITCHING_DIODE D3
-U 1 1 5283ECC5
-P 10150 3750
-F 0 "D3" H 10250 3650 40  0000 C CNN
-F 1 "BAV99LT3G" H 10150 3850 40  0000 C CNN
-F 2 "" H 10150 3750 60  0000 C CNN
-F 3 "" H 10150 3750 60  0000 C CNN
-	1    10150 3750
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	9850 4100 9950 4100
 Wire Wire Line
@@ -1927,4 +1976,30 @@ Wire Wire Line
 	8950 5700 8500 5700
 Wire Wire Line
 	8500 5700 8500 5750
+Wire Wire Line
+	9250 3600 9250 3650
+Wire Wire Line
+	10850 2200 10725 2200
+Wire Wire Line
+	10150 2950 10450 2950
+Wire Wire Line
+	10150 2775 10450 2775
+Wire Wire Line
+	9200 2775 9650 2775
+Wire Wire Line
+	9200 2950 9650 2950
+Wire Wire Line
+	2800 1200 3000 1200
+Connection ~ 10750 4900
+Wire Wire Line
+	10750 4900 10950 4900
+Wire Wire Line
+	10750 4700 10750 5050
+Wire Wire Line
+	9850 4700 10750 4700
+Wire Wire Line
+	10650 4850 10650 5050
+NoConn ~ 10550 5050
+Text Notes 600  1125 0    60   ~ 0
+R3 and R4\nneed not\nbe fitted
 $EndSCHEMATC

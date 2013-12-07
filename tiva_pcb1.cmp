@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2013-11-08 BZR 4448)-product date = 2013-11-14T23:48:33 CET
+Cmp-Mod V01 Created by CvPcb (2013-11-08 BZR 4448)-product date = 2013-11-19T22:54:02 CET
 
 BeginCmp
 TimeStamp = /52821C0C;
@@ -10,7 +10,7 @@ EndCmp
 BeginCmp
 TimeStamp = /519E8846;
 Reference = C1;
-ValeurCmp = 10n;
+ValeurCmp = 100n;
 IdModule  = w_smd_cap:c_0805;
 EndCmp
 
@@ -24,7 +24,7 @@ EndCmp
 BeginCmp
 TimeStamp = /519E8844;
 Reference = C3;
-ValeurCmp = 10n;
+ValeurCmp = 100n;
 IdModule  = w_smd_cap:c_0805;
 EndCmp
 
@@ -38,7 +38,7 @@ EndCmp
 BeginCmp
 TimeStamp = /519E884B;
 Reference = C5;
-ValeurCmp = 10n;
+ValeurCmp = 100n;
 IdModule  = w_smd_cap:c_0805;
 EndCmp
 
@@ -106,10 +106,10 @@ IdModule  = w_smd_cap:c_0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /528266A3;
+TimeStamp = /528B628D;
 Reference = C15;
 ValeurCmp = 100u;
-IdModule  = w_smd_cap:c_0805;
+IdModule  = w_smd_cap:c_elec_6.3x5.3;
 EndCmp
 
 BeginCmp
@@ -228,7 +228,7 @@ BeginCmp
 TimeStamp = /528363A0;
 Reference = P6;
 ValeurCmp = CONN_3;
-IdModule  = knielsenlib:con-jack-DCJ0303;
+IdModule  = w_conn_misc:dc_socket;
 EndCmp
 
 BeginCmp
@@ -361,6 +361,27 @@ BeginCmp
 TimeStamp = /52837215;
 Reference = R16;
 ValeurCmp = 47k;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /528B6632;
+Reference = R17;
+ValeurCmp = 47k;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /528BDD28;
+Reference = R18;
+ValeurCmp = R;
+IdModule  = w_smd_resistors:r_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /528BDD3A;
+Reference = R19;
+ValeurCmp = R;
 IdModule  = w_smd_resistors:r_0805;
 EndCmp
 
