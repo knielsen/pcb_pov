@@ -1,5 +1,5 @@
 M48
-;DRILL file {Pcbnew (2013-11-08 BZR 4448)-product} date 2013-12-07T17:29:30 CET
+;DRILL file {Pcbnew (2013-11-08 BZR 4448)-product} date 2013-12-08T10:58:18 CET
 ;FORMAT={-:-/ absolute / metric / decimal}
 FMAT,2
 METRIC,TZ
